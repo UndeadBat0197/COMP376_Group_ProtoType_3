@@ -1,41 +1,95 @@
 ###
-# Unity folders and files
+# Unity generated folders and files
 ###
-[Aa]ssets/AssetStoreTools*
-[Bb]uild/
 [Ll]ibrary/
-[Ll]ocal[Cc]ache/
-[Oo]bj/
 [Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Ll]ocal[Cc]ache/
 [Uu]nityGenerated/
-# file on crash reports
+[Aa]ssets/AssetStoreTools*
+
+# Crash reports
 sysinfo.txt
-# Unity3D generated meta files
+
+# Unity generated files
+*.pidb
 *.pidb.meta
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
 
 ###
-# VS/MD solution and project files
+# Visual Studio / IDE files
 ###
-[Ee]xportedObj/
-*.booproj
+.vs/
+.vscode/
+.idea/
+.gradle/
+
 *.csproj
-*.sln
-*.suo
-*.svd
 *.unityproj
+*.sln
+*.slnx
+*.suo
 *.user
 *.userprefs
-*.pidb
-.DS_Store
+*.userosscache
+*.sln.docstates
+*.booproj
+*.svd
+
+# JetBrains Rider
+*.sln.iml
 
 ###
-# OS generated
+# Build and debug files
 ###
+*.apk
+*.aab
+*.app
+*.exe
+*.dll
+*.pdb
+*.mdb
+
+###
+# OS generated files
+###
+
+# macOS
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
+.AppleDouble
+.LSOverride
 Icon?
-ehthumbs.db
+
+# Windows
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+###
+# Temporary files
+###
+*.tmp
+*.bak
+*.swp
+*.orig
+# Unity logs
+[Ll]ogs/
+*.log
+
+# Unity user-specific settings
+[Uu]ser[Ss]ettings/
