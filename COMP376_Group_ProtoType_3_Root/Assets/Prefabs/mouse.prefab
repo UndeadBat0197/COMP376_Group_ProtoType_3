@@ -847,6 +847,8 @@ GameObject:
   - component: {fileID: 6847410774459391656}
   - component: {fileID: 784023983304174900}
   - component: {fileID: 4957067948448415206}
+  - component: {fileID: 5747974201138308135}
+  - component: {fileID: 1805365056766094914}
   m_Layer: 0
   m_Name: mouse
   m_TagString: Player
@@ -939,3 +941,32 @@ MonoBehaviour:
   jumpForce: 6
   jumpCutMultiplier: 0.5
   additionalJumps: 0
+--- !u!114 &5747974201138308135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9088620575738746889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e5a75be31d70949809174cf83f7c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheeseSmellMeter
+  smellPanel: {fileID: 0}
+  smellSlider: {fileID: 0}
+  smellText: {fileID: 0}
+--- !u!114 &1805365056766094914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9088620575738746889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707ad336d7594554cb8d15d4fe1f3953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WallClimbing
+  climbSpeed: 3
+  minClimbAngle: 70
