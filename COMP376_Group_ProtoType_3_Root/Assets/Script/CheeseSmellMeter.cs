@@ -11,21 +11,41 @@ public class CheeseSmellMeter : MonoBehaviour
 
     private void Awake()
     {
-        smellPanel.SetActive(false);
+        HideSmell();
+    }
+
+    private void OnEnable()
+    {
+        HideSmell();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        UpdateSmell(other);
     }
 
     private void OnTriggerStay(Collider other)
+    {
+        UpdateSmell(other);
+    }
+
+    private void UpdateSmell(Collider other)
     {
         if (!other.CompareTag("SmellZone"))
             return;
 
         SphereCollider zone = other as SphereCollider;
-
         if (zone == null)
             return;
 
-        // Find the smell zone's center and world-space radius
-        Vector3 center = zone.transform.TransformPoint(zone.center);
+        if (smellPanel == null ||
+            smellSlider == null ||
+            smellText == null)
+            return;
+
+        Vector3 center =
+            zone.transform.TransformPoint(zone.center);
+
         Vector3 scale = zone.transform.lossyScale;
 
         float radius = zone.radius * Mathf.Max(
@@ -34,10 +54,14 @@ public class CheeseSmellMeter : MonoBehaviour
             Mathf.Abs(scale.z)
         );
 
-        float distance = Vector3.Distance(transform.position, center);
+        if (radius <= 0f)
+            return;
 
-        // Smell is strongest at the center
-        float strength = Mathf.Clamp01(1f - distance / radius);
+        float distance =
+            Vector3.Distance(transform.position, center);
+
+        float strength =
+            Mathf.Clamp01(1f - distance / radius);
 
         smellPanel.SetActive(true);
         smellSlider.value = strength;
@@ -53,10 +77,15 @@ public class CheeseSmellMeter : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("SmellZone"))
-            smellPanel.SetActive(false);
+            HideSmell();
     }
 
     private void OnDisable()
+    {
+        HideSmell();
+    }
+
+    private void HideSmell()
     {
         if (smellPanel != null)
             smellPanel.SetActive(false);
