@@ -2116,7 +2116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 479106389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef17c5ca8ffdba43a0d9ef7c14df236, type: 3}
+  m_Script: {fileID: 11500000, guid: 11db1991ec05e3849850d2527412b9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pushable
   displayName: Armchair
@@ -3838,7 +3838,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1219026855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c646ef9d8f898a48b466f3f7bb8ff8a, type: 3}
+  m_Script: {fileID: 11500000, guid: bc3b372a7f2fc2f448e0fb49f5dfedb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Liftable
   displayName: Rock
@@ -4000,7 +4000,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1242891704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c646ef9d8f898a48b466f3f7bb8ff8a, type: 3}
+  m_Script: {fileID: 11500000, guid: bc3b372a7f2fc2f448e0fb49f5dfedb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Liftable
   displayName: Small Rock
@@ -12177,7 +12177,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5904030286192946503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aced815d7689fa04c9dbd13be5f64849, type: 3}
+  m_Script: {fileID: 11500000, guid: 8273709420246e345b6a3b7ab888cb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HumanInteractor
   holdPoint: {fileID: 1258021852}
@@ -12201,7 +12201,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5904030286192946503}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02305cd4cacd2274bb210340c0ced759, type: 3}
+  m_Script: {fileID: 11500000, guid: b977373a6190a6d4dbefa0cfaaf5081d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HumanMovement
   cam: {fileID: 380145101}
