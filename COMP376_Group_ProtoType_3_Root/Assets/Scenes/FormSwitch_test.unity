@@ -282,8 +282,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138938971}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15212342, y: 0.0000000045496447, z: -7.0025746e-10, w: 0.98836154}
-  m_LocalPosition: {x: 0.232, y: 2.7124705, z: -2.8280094}
+  m_LocalRotation: {x: 0.23937818, y: -0.000000021182519, z: 0.0000000052224687, w: 0.9709264}
+  m_LocalPosition: {x: 0.201, y: 1.7007059, z: 0.046283066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -322,14 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c646ef9d8f898a48b466f3f7bb8ff8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Liftable
-  displayName: 
-  carrySpeedMultiplier: 0.8
-  followSpeed: 20
-  breakDistance: 1.2
-  keepRelativeRotation: 1
-  massIfNoBody: 1
-  throwImpulse: 25
-  throwUpwardBias: 0.2
 --- !u!54 &139550769
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -517,7 +509,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3253880854959911989, guid: dd3fa71ec3d21a44d9f5204be7288ace, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 624527346}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2766278661624835727, guid: dd3fa71ec3d21a44d9f5204be7288ace, type: 3}
       insertIndex: -1
@@ -577,6 +572,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.10019008, y: 0.03636838, z: 0.0617769}
   m_Center: {x: 0.019934539, y: 0.00090610795, z: -0.0026787827}
+--- !u!4 &166032295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3253880854959911989, guid: dd3fa71ec3d21a44d9f5204be7288ace, type: 3}
+  m_PrefabInstance: {fileID: 166032290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180525318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1262,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3253880854959911989, guid: dd3fa71ec3d21a44d9f5204be7288ace, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 975691155}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2766278661624835727, guid: dd3fa71ec3d21a44d9f5204be7288ace, type: 3}
       insertIndex: -1
@@ -1508,6 +1511,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471716528}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &554134006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554134007}
+  - component: {fileID: 554134008}
+  m_Layer: 0
+  m_Name: CheeseSmellZone (2)
+  m_TagString: SmellZone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &554134007
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554134006}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3902951, y: 0.105390236, z: -4.468716}
+  m_LocalScale: {x: 0.36368382, y: 0.36368382, z: 0.36368382}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1466310452}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &554134008
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554134006}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &558309993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +2026,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &624527345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 624527346}
+  - component: {fileID: 624527347}
+  m_Layer: 0
+  m_Name: CheeseSmellZone (2)
+  m_TagString: SmellZone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &624527346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624527345}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.274, y: -0.003714921, z: -1.6215665}
+  m_LocalScale: {x: 0.36368382, y: 0.36368382, z: 0.36368382}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 166032295}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &624527347
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624527345}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &631412595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4549,14 +4658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef17c5ca8ffdba43a0d9ef7c14df236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pushable
-  displayName: 
-  allowPull: 1
-  canRotate: 0
-  turnSpeed: 70
-  speedMultiplier: 0.5
-  breakDistance: 0.6
-  lockWhenIdle: 1
-  snapToSides: 1
 --- !u!54 &973998977
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4606,6 +4707,59 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1257026877227516879, guid: bc4c2d20df5e6044ea88182499f3a93d, type: 3}
+--- !u!1 &975691154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 975691155}
+  - component: {fileID: 975691156}
+  m_Layer: 0
+  m_Name: CheeseSmellZone (2)
+  m_TagString: SmellZone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &975691155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975691154}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.008465567, y: -0.071, z: -0.053643387}
+  m_LocalScale: {x: 0.3636838, y: 0.36368382, z: 0.3636838}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 464908869}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &975691156
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975691154}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1021437738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5585,14 +5739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c646ef9d8f898a48b466f3f7bb8ff8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Liftable
-  displayName: 
-  carrySpeedMultiplier: 0.8
-  followSpeed: 20
-  breakDistance: 1.2
-  keepRelativeRotation: 1
-  massIfNoBody: 1
-  throwImpulse: 25
-  throwUpwardBias: 0.2
 --- !u!54 &1173400306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7532,7 +7678,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3253880854959911989, guid: dd3fa71ec3d21a44d9f5204be7288ace, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 554134007}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2766278661624835727, guid: dd3fa71ec3d21a44d9f5204be7288ace, type: 3}
       insertIndex: -1
@@ -7592,6 +7741,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.10019008, y: 0.03636838, z: 0.0617769}
   m_Center: {x: 0.019934539, y: 0.00090610795, z: -0.0026787827}
+--- !u!4 &1466310452 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3253880854959911989, guid: dd3fa71ec3d21a44d9f5204be7288ace, type: 3}
+  m_PrefabInstance: {fileID: 1466310447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1509987920
 GameObject:
   m_ObjectHideFlags: 0
