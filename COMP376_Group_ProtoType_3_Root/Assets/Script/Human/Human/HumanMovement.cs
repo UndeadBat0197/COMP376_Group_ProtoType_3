@@ -85,7 +85,7 @@ public class HumanMovement : MonoBehaviour
 
     void Update()
     {
-        if (!InputEnabled)
+        if (!InputEnabled || GameState.InputBlocked)
         {
             inputH = inputV = 0f;
             inputDir = Vector3.zero;

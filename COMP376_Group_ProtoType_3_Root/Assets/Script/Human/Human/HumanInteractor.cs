@@ -87,6 +87,7 @@ public class HumanInteractor : MonoBehaviour
     void Update()
     {
         if (viewCamera == null) viewCamera = Camera.main;
+        if (GameState.InputBlocked) return; // a menu is open
 
         if (Held != null)
         {
@@ -258,7 +259,63 @@ public class HumanInteractor : MonoBehaviour
         Cursor.visible = !locked;
     }
 
-    // ---------------- Placeholder UI ----------------
+    // ---------------- Prompt data (used by GameHUD) ----------------
+
+    public struct PromptAction
+    {
+        public string key;
+        public string label;
+        public PromptAction(string key, string label) { this.key = key; this.label = label; }
+    }
+
+    /// <summary>The message from ShowMessage() if it's still showing, else null.</summary>
+    public string ActiveMessage => message != null && Time.time < messageUntil ? message : null;
+
+    public bool ShowCrosshair => ActiveLook == null && Held == null && Grabbed == null;
+
+    /// <summary>
+    /// What the on-screen prompt should say right now: an optional title ("Carrying Rock") and
+    /// the key/action pairs. Returns false if there's nothing to show.
+    /// </summary>
+    public bool GetPrompt(System.Collections.Generic.List<PromptAction> actions, out string title)
+    {
+        actions.Clear();
+        title = null;
+        string use = KeyName(interactKey), grab = KeyName(grabKey);
+
+        if (Held != null)
+        {
+            title = $"Carrying {Held.DisplayName}";
+            actions.Add(new PromptAction(use, "Drop"));
+            actions.Add(new PromptAction(KeyName(throwKey), "Throw"));
+        }
+        else if (Grabbed != null)
+        {
+            title = $"Holding {Grabbed.DisplayName}";
+            actions.Add(new PromptAction("W", "Push"));
+            if (Grabbed.allowPull) actions.Add(new PromptAction("S", "Pull"));
+            if (Grabbed.canRotate) actions.Add(new PromptAction("A/D", "Turn"));
+            actions.Add(new PromptAction(grab, "Let go"));
+        }
+        else if (ActiveLook != null)
+        {
+            title = $"Looking in the {ActiveLook.DisplayName}";
+            if (Current != null) actions.Add(new PromptAction("Click", Current.GetPrompt(this)));
+            actions.Add(new PromptAction(KeyName(exitLookKey), "Step back"));
+        }
+        else if (Current != null && Current == CurrentMovable)
+        {
+            actions.Add(new PromptAction(grab, Current.GetPrompt(this))); // E works too; F matches the controls card
+        }
+        else
+        {
+            if (Current != null) actions.Add(new PromptAction(use, Current.GetPrompt(this)));
+            if (CurrentMovable != null) actions.Add(new PromptAction(grab, CurrentMovable.GetPrompt(this)));
+        }
+        return title != null || actions.Count > 0;
+    }
+
+    // ---------------- Placeholder UI (off when the GameHUD is in the scene) ----------------
 
     void OnGUI()
     {
@@ -326,7 +383,7 @@ public class HumanInteractor : MonoBehaviour
         GUI.color = old;
     }
 
-    static string KeyName(KeyCode k)
+    public static string KeyName(KeyCode k)
     {
         switch (k)
         {
